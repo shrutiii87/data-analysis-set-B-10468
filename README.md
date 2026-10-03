@@ -126,43 +126,6 @@ The business objective of this project is to analyze support-ticket resolution p
 | 11 | Mar | T3 | Chat | 32 | 3 | AppSupport | Technical | 1 |
 | 12 | Mar | T4 | Phone | 24 | 5 | DeviceHelp | Technical | 0 |
 
----
-
-## 🧹 Cleaning Steps Taken
-
-- Loaded `tickets.csv` + `teams.csv`; checked shape, dtypes, nulls (none found).
-- Found and removed 1 exact duplicate row (`ticket_id = 12`): **13 → 12 rows**.
-- Left-merged `tickets` with `teams` on `team_id`.
-- Validated merge: 12 rows, zero missing `department` (confirmed via SQL diagnostic S3 → every team has 3 matched tickets, `unmatched_team_flag = 0`).
-- Derived `breach_flag`.
-- Exported `clean_data.csv` and `python_summary.csv`.
-
-### 📐 Metric Definitions
-
-```
-breach_flag = 1 if resolution_hours > 24 else 0
-
-sla_breach_rate =
-    COUNT(resolution_hours > 24) / COUNT(total tickets) * 100
-```
-
-Example (Technical, 6 tickets): 3 breached → `3/6*100 = 50.00%`; Service: `2/6*100 = 33.33%`
-
----
-
-## 🛠️ Tools & Versions Used
-
-| Tool | Version |
-|---|---|
-| SQL Engine | PostgreSQL 16.x |
-| Python | 3.x |
-| pandas | 2.x |
-| matplotlib | 3.x |
-| Jupyter Notebook | 7.x |
-| Microsoft Excel | Microsoft 365 (desktop) |
-| Power BI | Power BI Desktop |
-
-> Run `pip freeze > requirements.txt` and paste exact pinned versions here.
 
 ---
 
