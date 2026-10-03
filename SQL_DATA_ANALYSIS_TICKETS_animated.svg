@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="dbGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="0.6"/>
+    </pattern>
+  
+    <style>
+      .anim-card { opacity: 0; transform-box: fill-box; transform-origin: center; animation: cardIn 0.8s cubic-bezier(.2,.8,.2,1) forwards; }
+      .delay-1 { animation-delay: .15s; }
+      .delay-2 { animation-delay: .35s; }
+      .delay-3 { animation-delay: .55s; }
+      .delay-4 { animation-delay: .75s; }
+      .flow { stroke-dasharray: 10 12; animation: flow 1.4s linear infinite; }
+      .pulse { animation: pulse 1.8s ease-in-out infinite; }
+      .float { animation: float 3.5s ease-in-out infinite; }
+      .scan { animation: scan 2.8s ease-in-out infinite; }
+      .blink { animation: blink 1.6s ease-in-out infinite; }
+      @keyframes cardIn {
+        0% { opacity: 0; transform: translateY(18px) scale(.985); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes flow {
+        to { stroke-dashoffset: -44; }
+      }
+      @keyframes pulse {
+        0%,100% { opacity: .45; transform: scale(.9); }
+        50% { opacity: 1; transform: scale(1.12); }
+      }
+      @keyframes float {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes scan {
+        0%,100% { opacity: .12; transform: translateX(0); }
+        50% { opacity: .5; transform: translateX(105px); }
+      }
+      @keyframes blink {
+        0%,45%,100% { opacity: 1; }
+        50%,80% { opacity: .35; }
+      }
+    </style>
+
+  </defs>
+
+  <!-- background -->
+  <rect width="1600" height="600" fill="#ffffff"/>
+  <rect width="1600" height="600" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- LEFT PANEL -->
+  <rect x="88" y="105" width="4" height="330" fill="#2563eb"/>
+  <text x="120" y="135" font-size="22" font-weight="bold" fill="#2563eb" letter-spacing="6">S Q L</text>
+  <text x="120" y="172" font-size="15" fill="#1e293b" letter-spacing="4">T A S K</text>
+  <text class="anim-card" x="120" y="235" font-size="44" font-weight="bold" fill="#0f172a">SQL Data</text>
+  <text class="anim-card delay-1" x="120" y="288" font-size="44" font-weight="bold" fill="#2563eb">Analysis</text>
+  <line x1="120" y1="322" x2="390" y2="322" stroke="#0f172a" stroke-width="2"/>
+  <text x="120" y="356" font-size="16" fill="#64748b" letter-spacing="2">QUERY</text>
+  <circle cx="192" cy="350" r="4" fill="#2563eb"/>
+  <text x="208" y="356" font-size="16" fill="#64748b" letter-spacing="2">DATABASE</text>
+  <circle cx="310" cy="350" r="4" fill="#2563eb"/>
+  <text x="326" y="356" font-size="16" fill="#64748b" letter-spacing="2">INSIGHTS</text>
+
+  <!-- decorative lines -->
+  <line x1="120" y1="412" x2="400" y2="412" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="208" cy="412" r="5" fill="#93c5fd"/>
+  <line x1="120" y1="440" x2="340" y2="440" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="120" y1="468" x2="375" y2="468" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="120" y1="508" x2="400" y2="508" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- database cylinder -->
+  <g>
+    <path d="M 400 400 L 400 480 A 85 26 0 0 0 570 480 L 570 400" fill="none" stroke="#334155" stroke-width="2"/>
+    <ellipse cx="485" cy="400" rx="85" ry="26" fill="url(#dbGrad)" stroke="#334155" stroke-width="2"/>
+    <ellipse cx="485" cy="480" rx="85" ry="26" fill="none" stroke="#334155" stroke-width="2"/>
+    <circle cx="480" cy="462" r="8" fill="#2563eb"/>
+    <line x1="400" y1="505" x2="540" y2="505" stroke="#e2e8f0" stroke-width="2"/>
+  </g>
+
+  <!-- MAIN CARD -->
+  <rect x="700" y="70" width="810" height="470" rx="24" fill="url(#cardBg)" stroke="#334155" stroke-width="1.5"/>
+  <text x="730" y="108" font-size="22" font-weight="bold" fill="#0f172a">SQL Data Analysis</text>
+  <text x="730" y="130" font-size="11" fill="#64748b" letter-spacing="1">QUERY WORKSPACE</text>
+  <circle cx="1448" cy="100" r="8" fill="#93c5fd"/>
+  <text x="1464" y="104" font-size="11" fill="#64748b" letter-spacing="1">ACTIVE</text>
+  <line x1="1070" y1="70" x2="1070" y2="540" stroke="#93c5fd" stroke-width="1.5"/>
+
+  <!-- Query Editor card -->
+  <rect x="730" y="160" width="310" height="320" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="750" y="188" font-size="15" font-weight="bold" fill="#0f172a">Query Editor</text>
+  <line x1="730" y1="202" x2="1040" y2="202" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="750" y="232" font-size="14" font-family="Consolas, monospace" fill="#2563eb">SELECT</text>
+  <text x="750" y="258" font-size="14" font-family="Consolas, monospace" fill="#334155">  team_id, channel,</text>
+  <text x="750" y="282" font-size="14" font-family="Consolas, monospace" fill="#334155">  AVG(satisfaction) AS avg_rating</text>
+  <text x="750" y="310" font-size="14" font-family="Consolas, monospace" fill="#2563eb">FROM support_tickets</text>
+  <text x="750" y="338" font-size="14" font-family="Consolas, monospace" fill="#2563eb">WHERE month = 'Feb'</text>
+  <text x="750" y="366" font-size="14" font-family="Consolas, monospace" fill="#2563eb">GROUP BY team_id, channel</text>
+  <text x="750" y="394" font-size="14" font-family="Consolas, monospace" fill="#2563eb">ORDER BY avg_rating DESC;</text>
+  <rect x="750" y="408" width="2" height="18" fill="#2563eb"/>
+  <rect x="750" y="440" width="120" height="30" rx="8" fill="#2563eb"/>
+  <text class="blink" x="810" y="460" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">RUN QUERY</text>
+
+
+  <rect class="scan" x="1128" y="150" width="3" height="345" rx="2"
+        fill="#2563eb" opacity=".12" pointer-events="none"/>
+
+  <path class="flow" d="M 930 275 C 990 275, 1035 235, 1120 235"
+        fill="none" stroke="#2563eb" stroke-width="2" opacity=".55"/>
+  <circle class="pulse" cx="1120" cy="235" r="4" fill="#2563eb"/>
+
+  <!-- Query Result card -->
+  <g class="anim-card delay-3">
+  <rect x="1130" y="160" width="350" height="150" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1150" y="188" font-size="15" font-weight="bold" fill="#0f172a">Query Result</text>
+  <text x="1150" y="216" font-size="12" fill="#64748b">rows returned</text>
+  <text x="1440" y="216" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="end">12</text>
+  <text x="1150" y="242" font-size="12" fill="#64748b">execution time</text>
+  <text x="1440" y="242" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="end">0.08s</text>
+  <text x="1150" y="268" font-size="12" fill="#64748b">status</text>
+  <text x="1440" y="268" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="end" letter-spacing="1">SUCCESS</text>
+  <line x1="1150" y1="288" x2="1460" y2="288" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="1150" y1="288" x2="1400" y2="288" stroke="#2563eb" stroke-width="2"/>
+
+  </g>
+
+  <!-- Result Table card -->
+  <g class="anim-card delay-4">
+  <rect x="1130" y="335" width="350" height="150" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1150" y="363" font-size="15" font-weight="bold" fill="#0f172a">Result Table</text>
+  <text x="1150" y="392" font-size="11" fill="#2563eb" letter-spacing="1">TEAM</text>
+  <text x="1300" y="392" font-size="11" fill="#2563eb" letter-spacing="1">CHANNEL</text>
+  <text x="1430" y="392" font-size="11" fill="#2563eb" letter-spacing="1">RATING</text>
+  <line x1="1150" y1="402" x2="1460" y2="402" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1150" y="424" font-size="12" fill="#334155">T1</text>
+  <text x="1300" y="424" font-size="12" fill="#334155">Chat</text>
+  <text x="1430" y="424" font-size="12" fill="#334155">5.0</text>
+  <text x="1150" y="450" font-size="12" fill="#334155">T3</text>
+  <text x="1300" y="450" font-size="12" fill="#334155">Email</text>
+  <text x="1430" y="450" font-size="12" fill="#334155">4.0</text>
+  <text x="1150" y="476" font-size="12" fill="#334155">T2</text>
+  <text x="1300" y="476" font-size="12" fill="#334155">Phone</text>
+  <text x="1430" y="476" font-size="12" fill="#334155">3.0</text>
+
+  </g>
+
+  <!-- decorative dots -->
+  <circle class="pulse" cx="1420" cy="512" r="5" fill="#2563eb"/>
+  <circle class="pulse" cx="1360" cy="524" r="4" fill="#2563eb" style="animation-delay:.4s"/>
+  <circle class="pulse" cx="1478" cy="530" r="4" fill="#2563eb" style="animation-delay:.8s"/>
+  <circle class="pulse" cx="1510" cy="540" r="8" fill="#2563eb" style="animation-delay:1.2s"/>
+</svg>

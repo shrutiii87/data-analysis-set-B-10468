@@ -1,0 +1,583 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600">
+
+<defs>
+
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40"
+          fill="none"
+          stroke="#1677FF"
+          stroke-width="1"
+          opacity=".055"/>
+  </pattern>
+
+  <filter id="shadow">
+    <feDropShadow dx="0" dy="10" stdDeviation="16"
+                  flood-color="#000000"
+                  flood-opacity=".10"/>
+  </filter>
+
+  <filter id="soft">
+    <feGaussianBlur stdDeviation="14"/>
+  </filter>
+
+  <clipPath id="dashboardClip">
+    <rect x="690" y="65" width="825" height="470" rx="22"/>
+  </clipPath>
+
+</defs>
+
+<!-- WHITE BACKGROUND -->
+<rect width="1600" height="600" fill="#FFFFFF"/>
+
+<!-- ANIMATED GRID -->
+<rect width="1600" height="600" fill="url(#grid)">
+  <animateTransform
+    attributeName="transform"
+    type="translate"
+    values="0 0;40 40;0 0"
+    dur="8s"
+    repeatCount="indefinite"/>
+</rect>
+
+<!-- SOFT ANIMATED BACKGROUND -->
+<circle cx="1240" cy="300" r="190"
+        fill="#1677FF"
+        opacity=".025"
+        filter="url(#soft)">
+  <animate attributeName="r"
+           values="190;245;190"
+           dur="5s"
+           repeatCount="indefinite"/>
+  <animate attributeName="opacity"
+           values=".02;.06;.02"
+           dur="5s"
+           repeatCount="indefinite"/>
+</circle>
+
+<!-- LEFT BLUE ACCENT -->
+<rect x="88" y="105"
+      width="5"
+      height="275"
+      rx="3"
+      fill="#1677FF">
+  <animate attributeName="height"
+           values="275;325;275"
+           dur="3s"
+           repeatCount="indefinite"/>
+</rect>
+
+<!-- TITLE -->
+<text x="120" y="135"
+      font-family="Arial,sans-serif"
+      font-size="18"
+      font-weight="700"
+      letter-spacing="4"
+      fill="#1677FF">
+  PYTHON
+</text>
+
+<text x="120" y="170"
+      font-family="Arial,sans-serif"
+      font-size="13"
+      font-weight="600"
+      letter-spacing="3"
+      fill="#111111">
+  TASK
+</text>
+
+<text x="120" y="235"
+      font-family="Arial,sans-serif"
+      font-size="47"
+      font-weight="700"
+      fill="#111111">
+  Python Data
+</text>
+
+<text x="120" y="285"
+      font-family="Arial,sans-serif"
+      font-size="47"
+      font-weight="700"
+      fill="#1677FF">
+  Analysis
+</text>
+
+<rect x="120" y="320"
+      width="270"
+      height="2"
+      fill="#111111"/>
+
+<text x="120" y="355"
+      font-family="Arial,sans-serif"
+      font-size="14"
+      letter-spacing="2"
+      fill="#667085">
+  PYTHON
+</text>
+
+<circle cx="202" cy="350"
+        r="3"
+        fill="#1677FF">
+  <animate attributeName="r"
+           values="3;6;3"
+           dur="1.5s"
+           repeatCount="indefinite"/>
+</circle>
+
+<text x="216" y="355"
+      font-family="Arial,sans-serif"
+      font-size="14"
+      letter-spacing="2"
+      fill="#667085">
+  DATA
+</text>
+
+<circle cx="284" cy="350"
+        r="3"
+        fill="#1677FF">
+  <animate attributeName="r"
+           values="3;6;3"
+           dur="1.5s"
+           repeatCount="indefinite"/>
+</circle>
+
+<text x="298" y="355"
+      font-family="Arial,sans-serif"
+      font-size="14"
+      letter-spacing="2"
+      fill="#667085">
+  PROGRAMMING
+</text>
+
+<!-- CODE LINES -->
+<g opacity=".38">
+
+  <path d="M120 410H390"
+        stroke="#111111"
+        stroke-width="1"/>
+
+  <path d="M120 425H330"
+        stroke="#1677FF"
+        stroke-width="1"/>
+
+  <path d="M120 440H370"
+        stroke="#111111"
+        stroke-width="1"/>
+
+  <circle cx="120" cy="410"
+          r="3"
+          fill="#1677FF">
+    <animate attributeName="cx"
+             values="120;390;120"
+             dur="3s"
+             repeatCount="indefinite"/>
+  </circle>
+
+</g>
+
+<!-- PYTHON CODE OBJECT -->
+<g transform="translate(390 390)">
+
+  <rect x="0" y="0"
+        width="190"
+        height="105"
+        rx="12"
+        fill="#FFFFFF"
+        stroke="#111111"
+        stroke-width="1"/>
+
+  <rect x="0" y="0"
+        width="190"
+        height="25"
+        rx="12"
+        fill="#F7F9FC"/>
+
+  <circle cx="15" cy="13" r="3" fill="#1677FF"/>
+  <circle cx="27" cy="13" r="3" fill="#111111"/>
+  <circle cx="39" cy="13" r="3" fill="#1677FF"/>
+
+  <text x="18" y="48"
+        font-family="monospace"
+        font-size="12"
+        fill="#1677FF">
+    &gt;&gt;&gt; print(data)
+  </text>
+
+  <text x="18" y="68"
+        font-family="monospace"
+        font-size="12"
+        fill="#111111">
+    [12, 24, 36, 48]
+  </text>
+
+  <text x="18" y="88"
+        font-family="monospace"
+        font-size="12"
+        fill="#667085">
+    &gt;&gt;&gt; sum(data)
+  </text>
+
+  <rect x="132" y="78"
+        width="3"
+        height="13"
+        fill="#1677FF">
+    <animate attributeName="opacity"
+             values="1;0;1"
+             dur="1s"
+             repeatCount="indefinite"/>
+  </rect>
+
+</g>
+
+<!-- DASHBOARD / PYTHON WORKSPACE -->
+<rect x="690" y="65"
+      width="825"
+      height="470"
+      rx="22"
+      fill="#FFFFFF"
+      filter="url(#shadow)"/>
+
+<rect x="690" y="65"
+      width="825"
+      height="470"
+      rx="22"
+      fill="#FFFFFF"
+      stroke="#111111"
+      stroke-width="1.2"/>
+
+<g clip-path="url(#dashboardClip)">
+
+  <!-- HEADER -->
+  <rect x="690" y="65"
+        width="825"
+        height="70"
+        fill="#FAFAFA"/>
+
+  <text x="725" y="105"
+        font-family="Arial,sans-serif"
+        font-size="19"
+        font-weight="700"
+        fill="#111111">
+    Python Data Analysis
+  </text>
+
+  <text x="725" y="123"
+        font-family="Arial,sans-serif"
+        font-size="10"
+        letter-spacing="1.4"
+        fill="#667085">
+    PYTHON WORKSPACE
+  </text>
+
+  <!-- STATUS -->
+  <circle cx="1450" cy="94"
+          r="5"
+          fill="#1677FF">
+    <animate attributeName="r"
+             values="4;8;4"
+             dur="1.4s"
+             repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+             values="1;.3;1"
+             dur="1.4s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <text x="1463" y="99"
+        font-family="Arial,sans-serif"
+        font-size="11"
+        fill="#667085">
+    RUNNING
+  </text>
+
+  <!-- CODE PANEL -->
+  <rect x="720" y="155"
+        width="350"
+        height="320"
+        rx="12"
+        fill="#FCFCFD"
+        stroke="#E5E7EB"/>
+
+  <text x="742" y="183"
+        font-family="Arial,sans-serif"
+        font-size="14"
+        font-weight="600"
+        fill="#111111">
+    Python Code
+  </text>
+
+  <rect x="742" y="198"
+        width="306"
+        height="1"
+        fill="#E5E7EB"/>
+
+  <!-- CODE -->
+  <text x="750" y="230"
+        font-family="monospace"
+        font-size="13"
+        fill="#1677FF">
+    import pandas as pd
+  </text>
+
+  <text x="750" y="255"
+        font-family="monospace"
+        font-size="13"
+        fill="#111111">
+    data = pd.read_csv("teams.csv")
+  </text>
+
+  <text x="750" y="280"
+        font-family="monospace"
+        font-size="13"
+        fill="#111111">
+    data.head()
+  </text>
+
+  <text x="750" y="305"
+        font-family="monospace"
+        font-size="13"
+        fill="#1677FF">
+    data.info()
+  </text>
+
+  <text x="750" y="330"
+        font-family="monospace"
+        font-size="13"
+        fill="#111111">
+    data.describe()
+  </text>
+
+  <text x="750" y="355"
+        font-family="monospace"
+        font-size="13"
+        fill="#1677FF">
+    data.dropna()
+  </text>
+
+  <text x="750" y="380"
+        font-family="monospace"
+        font-size="13"
+        fill="#111111">
+    data.groupby("department")
+  </text>
+
+  <text x="750" y="405"
+        font-family="monospace"
+        font-size="13"
+        fill="#1677FF">
+    data["team"].count()
+  </text>
+
+  <!-- BLINKING CURSOR -->
+  <rect x="750" y="420"
+        width="2"
+        height="16"
+        fill="#1677FF">
+    <animate attributeName="opacity"
+             values="1;0;1"
+             dur="1s"
+             repeatCount="indefinite"/>
+  </rect>
+
+  <!-- OUTPUT PANEL -->
+  <rect x="1095" y="155"
+        width="385"
+        height="150"
+        rx="12"
+        fill="#FFFFFF"
+        stroke="#E5E7EB"/>
+
+  <text x="1117" y="183"
+        font-family="Arial,sans-serif"
+        font-size="14"
+        font-weight="600"
+        fill="#111111">
+    Output
+  </text>
+
+  <text x="1117" y="210"
+        font-family="monospace"
+        font-size="12"
+        fill="#667085">
+    rows            4
+  </text>
+
+  <text x="1117" y="232"
+        font-family="monospace"
+        font-size="12"
+        fill="#667085">
+    columns       3
+  </text>
+
+  <text x="1117" y="254"
+        font-family="monospace"
+        font-size="12"
+        fill="#667085">
+    missing       0
+  </text>
+
+  <text x="1117" y="276"
+        font-family="monospace"
+        font-size="12"
+        fill="#1677FF">
+    status      complete
+  </text>
+
+  <!-- ANIMATED OUTPUT INDICATOR -->
+  <rect x="1400" y="210"
+        width="45"
+        height="4"
+        rx="2"
+        fill="#E5E7EB"/>
+
+  <rect x="1400" y="210"
+        width="10"
+        height="4"
+        rx="2"
+        fill="#1677FF">
+    <animate attributeName="width"
+             values="10;45;10"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </rect>
+
+  <!-- DATA TABLE -->
+  <rect x="1095" y="325"
+        width="385"
+        height="150"
+        rx="12"
+        fill="#FFFFFF"
+        stroke="#E5E7EB"/>
+
+  <text x="1117" y="352"
+        font-family="Arial,sans-serif"
+        font-size="14"
+        font-weight="600"
+        fill="#111111">
+    Data Preview
+  </text>
+
+  <!-- TABLE -->
+  <g font-family="monospace" font-size="10">
+
+    <text x="1117" y="378" fill="#1677FF">TEAM_ID</text>
+    <text x="1245" y="378" fill="#1677FF">TEAM</text>
+    <text x="1390" y="378" fill="#1677FF">DEPARTMENT</text>
+
+    <line x1="1117" y1="386"
+          x2="1455" y2="386"
+          stroke="#E5E7EB"/>
+
+    <text x="1117" y="405" fill="#111111">T1</text>
+    <text x="1245" y="405" fill="#111111">AccountCare</text>
+    <text x="1390" y="405" fill="#111111">Service</text>
+
+    <text x="1117" y="425" fill="#111111">T2</text>
+    <text x="1245" y="425" fill="#111111">BillingHelp</text>
+    <text x="1390" y="425" fill="#111111">Service</text>
+
+    <text x="1117" y="445" fill="#111111">T3</text>
+    <text x="1245" y="445" fill="#111111">AppSupport</text>
+    <text x="1390" y="445" fill="#111111">Technical</text>
+    <text x="1117" y="465" fill="#111111">T4</text>
+    <text x="1245" y="465" fill="#111111">DeviceHelp</text>
+    <text x="1390" y="465" fill="#111111">Technical</text>
+
+  </g>
+
+  <!-- MOVING HIGHLIGHT -->
+  <rect x="1105" y="390"
+        width="365"
+        height="22"
+        fill="#1677FF"
+        opacity=".05">
+    <animate attributeName="y"
+             values="390;450;390"
+             dur="3s"
+             repeatCount="indefinite"/>
+  </rect>
+
+</g>
+
+<!-- SCANNING ANIMATION -->
+<rect x="700" y="65"
+      width="2"
+      height="470"
+      fill="#1677FF"
+      opacity=".16">
+  <animate attributeName="x"
+           values="700;1505;700"
+           dur="6s"
+           repeatCount="indefinite"/>
+</rect>
+
+<!-- ORBIT -->
+<ellipse cx="1100"
+         cy="300"
+         rx="480"
+         ry="275"
+         fill="none"
+         stroke="#1677FF"
+         stroke-width="1"
+         stroke-dasharray="3 14"
+         opacity=".11">
+
+  <animateTransform
+    attributeName="transform"
+    type="rotate"
+    values="0 1100 300;360 1100 300"
+    dur="20s"
+    repeatCount="indefinite"/>
+
+</ellipse>
+
+<!-- FLOATING NODE -->
+<circle cx="1510"
+        cy="535"
+        r="6"
+        fill="#1677FF">
+
+  <animate attributeName="cy"
+           values="535;510;535"
+           dur="2.5s"
+           repeatCount="indefinite"/>
+
+</circle>
+
+<circle cx="1510"
+        cy="535"
+        r="14"
+        fill="none"
+        stroke="#1677FF"
+        opacity=".3">
+
+  <animate attributeName="r"
+           values="10;30;10"
+           dur="2.5s"
+           repeatCount="indefinite"/>
+
+  <animate attributeName="opacity"
+           values=".5;0;.5"
+           dur="2.5s"
+           repeatCount="indefinite"/>
+
+</circle>
+
+<!-- BOTTOM ANIMATION -->
+<rect x="120" y="505"
+      width="420"
+      height="2"
+      fill="#E5E7EB"/>
+
+<rect x="120" y="505"
+      width="80"
+      height="2"
+      fill="#1677FF">
+
+  <animate attributeName="width"
+           values="80;280;80"
+           dur="3s"
+           repeatCount="indefinite"/>
+
+</rect>
+
+</svg>
