@@ -1,8 +1,3 @@
--- Practical Exam — Data Analysis (Set B)
--- SQL Dialect: PostgreSQL
--- Version: PostgreSQL 16.x
--- Execution order: run this file first, then queries.sql
-
 DROP TABLE IF EXISTS tickets;
 DROP TABLE IF EXISTS teams;
 
