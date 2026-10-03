@@ -16,6 +16,23 @@ A customer support organisation wants to understand where and why tickets are ta
 
 ---
 
+**Question 1: Which department is slowest to resolve tickets and breaches the 24-hour SLA most often?**
+
+**Answer:** The Technical department. Its average resolution time is 28.33 hours, against 19.33 hours for Service. Its SLA breach rate is 50.00% (3 of 6 tickets), against 33.33% (2 of 6) for Service.
+
+Source: `S2a_avg_resolution_by_department.csv` and `python_summary.csv`.
+
+---
+
+**Question 2: Which channel generates the most SLA breaches?**
+
+**Answer:** Chat, with 3 breaches out of the 5 total. Phone has 2 and Email has 0.
+
+Source: `S2c_top_two_channels_by_breach.csv`, and the Excel `Summary` sheet for Email's 0.
+
+
+---
+
 🔨 Tools used :-
 
 <div>
