@@ -1,3 +1,8 @@
+<img width="1600" height="600" alt="CUSTOMER_SUPPORT_QUALITY_ANALYSIS" src="https://github.com/user-attachments/assets/96ebd0da-e020-4f5c-887d-bc33529bcab6" />
+
+
+---
+
 # 🎧 Customer Support Quality Analysis
 
 A customer support organisation wants to understand where and why tickets are taking too long to resolve, so it can decide which department, team, and contact channel needs operational attention. This project analyzes 12 support tickets across 4 teams and 3 channels (Jan–Mar) using SQL, Python, Excel, and Power BI, and answers two business questions.
@@ -44,6 +49,8 @@ The business objective of this project is to analyze support-ticket resolution p
 
 ## 🎬 Project Demo
 
+[![Watch Demo](https://img.shields.io/badge/Watch%20Demo-click_to%20watch%20video-blue?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1RbKVw8aQmSmwppOHCuHrSRZvQMGr-aEG/view?usp=sharing)
+
 📹 Add a link to your project walkthrough video here.
 
 ---
@@ -61,6 +68,7 @@ The business objective of this project is to analyze support-ticket resolution p
 | `Python_analysis.ipynb` | Python notebook |
 | `Python_chart.png` | Monthly average resolution hours chart |
 | `S2a_avg_resolution_by_department.csv` | SQL — average resolution hours by department |
+| `dashboard.pbix` | Power bi Dashboard file |
 | `S2b_teams_breaching_sla.csv` | SQL — teams averaging > 24 hours |
 | `S2c_top_two_channels_by_breach.csv` | SQL — top 2 channels by breach count |
 | `S3_team_ticket_diagnostic.csv` | SQL — unmatched team / orphan check |
@@ -153,6 +161,9 @@ Example (Technical, 6 tickets): 3 breached → `3/6*100 = 50.00%`; Service: `2/6
 
 ---
 
+<img width="1600" height="600" alt="EXCEL_DATA_ANALYSIS_TICKETS" src="https://github.com/user-attachments/assets/e5b97782-7e31-41dc-9ba1-54ce99c10909" />
+
+
 ## 📊 TASK :- 1 Excel Sheet Guide
 
 | Sheet | Purpose |
@@ -176,6 +187,8 @@ Example (Technical, 6 tickets): 3 breached → `3/6*100 = 50.00%`; Service: `2/6
 | Technical | 28.0 | 29.0 | 28.0 |
 
 ---
+<img width="1600" height="600" alt="SQL_DATA_ANALYSIS_TICKETS_animated" src="https://github.com/user-attachments/assets/a689d2de-3ba2-44f2-8112-2108801a8f8d" />
+
 
 ## 🧮 TASK :- 2 SQL Setup & Query Execution Steps
 
@@ -226,6 +239,9 @@ Same pattern is reused for the team (`HAVING AVG(...) > 24`), channel (`WHERE re
 
 ---
 
+<img width="1600" height="600" alt="PYTHON_DATA_ANALYSIS_TEAMS_CSV" src="https://github.com/user-attachments/assets/aeb4779e-5636-4b73-8490-d77ca7949160" />
+
+
 ## 🐍 TASK :- 3 Python Environment Setup & Run Instructions
 
 ```bash
@@ -270,13 +286,14 @@ Notebook stages: `P1` load/clean/merge → `P2` derive `breach_flag` + departmen
 
 **Monthly average resolution hours:** Jan **24.0** → Feb **24.0** → Mar **23.5**
 
-![Monthly Average Resolution Hours](Python_chart.png)
 
 ---
 
+<img width="1600" height="600" alt="power bi " src="https://github.com/user-attachments/assets/e5e480d4-a72d-4b02-9f80-2b385cbefe7f" />
+
+
 ## 📊 TASK :- 4 Power BI Data-Source Refresh Instructions
 
-![Power BI dashboard](Screenshot_2026-10-03_113715.png)
 
 **Dashboard contents:** KPI cards (Ticket Count **12**, SLA Breach Rate **41.67%**, Avg Satisfaction **3.58**), a channel slicer (Chat / Phone / Email), Avg Satisfaction by department bar chart, and Average Resolution Hours by month area chart.
 
