@@ -292,6 +292,9 @@ Notebook stages: `P1` load/clean/merge → `P2` derive `breach_flag` + departmen
 5. **Refresh** on the Home ribbon.
 6. If refresh errors, check that column headers still match (`month`, `channel`, `department`, `resolution_hours`, `satisfaction`, `breach_flag`).
 
+<img width="575" height="326" alt="Screenshot 2026-10-03 132212" src="https://github.com/user-attachments/assets/f6fb5d1e-4e22-4051-a799-19ae79ac2524" />
+
+
 ---
 
 ## 📈 Numeric Findings & Recommendation
